@@ -1,0 +1,11 @@
+termo = int(input('Digite um valor: '))
+f0 = 0
+f1 = 1
+cont = 3
+print('{} {}'.format(f0, f1), end=' ')
+while cont <= termo:
+    f2 = f1 + f0
+    print('{}'.format(f2), end=' ')
+    f0 = f1
+    f1 = f2
+    cont += 1
