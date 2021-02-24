@@ -1,4 +1,4 @@
-from map import produtos, pessoas, lista
+from .map import produtos, pessoas, lista
 
 #nova_lista = map(lambda x: x * 2, lista)
 
