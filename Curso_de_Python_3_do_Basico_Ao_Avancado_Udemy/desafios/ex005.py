@@ -22,8 +22,10 @@ def listar_tarefas(lista):
         sleep(3)
 
 
-def desfazer(lista):
+def desfazer(lista, lista_bkp):
     lista.pop()
+    lista_bkp.append()
+
 
 
 lista_tarefas = []
@@ -52,7 +54,6 @@ while True:
     elif int(opcao) == 2:
         listar_tarefas(lista_tarefas)
     elif int(opcao) == 3:
-        lista_tarefas_bkp = lista_tarefas[:]
         desfazer(lista_tarefas)
     elif int(opcao) == 4:
         add_tarefas(lista_tarefas_bkp[-1], lista_tarefas)
