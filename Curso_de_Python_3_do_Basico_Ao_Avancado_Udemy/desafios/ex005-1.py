@@ -19,13 +19,30 @@ def add_tarefas(tarefa, lista):
 def listar_tarefas(lista):
     for tarefa in lista:
         print(tarefa)
-        sleep(3)
 
 
 def desfazer(lista, lista_bkp):
+<<<<<<< HEAD
     lista.pop()
     lista_bkp.append()
 
+=======
+    if not lista:
+        print('Nada a desfazer')
+        return
+
+    valor_bkp = lista.pop()
+    lista_bkp.append(valor_bkp)
+
+
+def refazer(lista, lista_bkp):
+    if not lista:
+        print('Nada a refazer')
+        return
+
+    valor_bkp = lista_bkp.pop()
+    lista.append(valor_bkp)
+>>>>>>> 896b6ce52cd6898f6837891b6ee6e69ccd0ccb16
 
 
 lista_tarefas = []
@@ -44,7 +61,6 @@ while True:
     ''')
     print('*-*' * 30)
     opcao = input('Digite aqui: ')
-    sleep(3)
     if int(opcao) == 0:
         break
     elif int(opcao) == 1:
@@ -54,9 +70,13 @@ while True:
     elif int(opcao) == 2:
         listar_tarefas(lista_tarefas)
     elif int(opcao) == 3:
+<<<<<<< HEAD
         desfazer(lista_tarefas)
+=======
+        desfazer(lista_tarefas, lista_tarefas_bkp)
+>>>>>>> 896b6ce52cd6898f6837891b6ee6e69ccd0ccb16
     elif int(opcao) == 4:
-        add_tarefas(lista_tarefas_bkp[-1], lista_tarefas)
+        refazer(lista_tarefas, lista_tarefas_bkp)
     else:
         print('Opção Inválida')
 
