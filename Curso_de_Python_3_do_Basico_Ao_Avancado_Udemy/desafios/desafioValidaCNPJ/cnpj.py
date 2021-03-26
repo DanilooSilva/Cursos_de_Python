@@ -4,9 +4,8 @@ def validador(cnpj):
     if getCNPJString(validadorSegundoDigito(cnpj)) == cnpj_original:
         return True
     return False
-    
-    
-    
+
+
 def validadorPrimeiroDigito(cnpj):
     cnpj = getCNPJlista(cnpj)
     cnpj.append(formula(calculoPrimeiroDigito(cnpj)))
@@ -49,10 +48,12 @@ def calculoSegundoDigito(cnpj):
 
 
 def removeCaracteresEspeciais(cnpj):
-    return cnpj.replace('.','').replace('/','').replace('-', '')
+    return cnpj.replace('.', '').replace('/', '').replace('-', '')
+
 
 def formula(resultado):
     return str(11 - (resultado % 11) if 11 - (resultado % 11) <= 9 else 0)
+
 
 if __name__ == '__main__':
     print(validador('04.252.011/0001-10'))
