@@ -22,6 +22,11 @@ def listar_tarefas(lista):
 
 
 def desfazer(lista, lista_bkp):
+<<<<<<< HEAD
+    lista.pop()
+    lista_bkp.append()
+
+=======
     if not lista:
         print('Nada a desfazer')
         return
@@ -37,6 +42,7 @@ def refazer(lista, lista_bkp):
 
     valor_bkp = lista_bkp.pop()
     lista.append(valor_bkp)
+>>>>>>> 896b6ce52cd6898f6837891b6ee6e69ccd0ccb16
 
 
 lista_tarefas = []
@@ -64,7 +70,11 @@ while True:
     elif int(opcao) == 2:
         listar_tarefas(lista_tarefas)
     elif int(opcao) == 3:
+<<<<<<< HEAD
+        desfazer(lista_tarefas)
+=======
         desfazer(lista_tarefas, lista_tarefas_bkp)
+>>>>>>> 896b6ce52cd6898f6837891b6ee6e69ccd0ccb16
     elif int(opcao) == 4:
         refazer(lista_tarefas, lista_tarefas_bkp)
     else:
