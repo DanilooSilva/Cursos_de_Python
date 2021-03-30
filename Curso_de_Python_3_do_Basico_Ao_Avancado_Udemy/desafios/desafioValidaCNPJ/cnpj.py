@@ -13,7 +13,9 @@ def validadorPrimeiroDigito(cnpj):
 
 
 def getCNPJlista(cnpj):
-    return [cnpj[c] for c in range(0, len(cnpj) - 2)]
+    if len(cnpj) == 14:
+        return [cnpj[c] for c in range(0, len(cnpj) - 2)] 
+    return [cnpj[c] for c in range(0, len(cnpj))] 
 
 
 def getCNPJString(cnpjLista):
