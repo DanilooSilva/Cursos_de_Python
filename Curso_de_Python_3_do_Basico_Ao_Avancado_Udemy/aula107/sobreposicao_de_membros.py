@@ -1,4 +1,4 @@
-from classes import Cliente, Pessoa, Aluno
+from classes import Cliente, Pessoa, Aluno, ClienteVIP
 
 """
 Associação - Usa | Agregação - Tem | Composição - É dono | Herança É
@@ -14,3 +14,6 @@ a1 = Aluno('Maria', 27)
 print(a1.nome)
 a1.falar()
 a1.estudar()
+
+c2 = ClienteVIP('Scarlett', 2, 'Gomes')
+c2.falar()
