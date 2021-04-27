@@ -31,13 +31,17 @@ from classes.cliente import Cliente
 
 
 cc = ContaCorrente('12', '159357')
+cc2 = ContaCorrente('13', '111111')
 danilo = Cliente("Danilo", 27, cc)
+Maria = Cliente("Maria", 28, cc2)
 nu = Banco()
 nu.add_cliente(danilo)
 nu.add_conta(cc)
 if nu.valida(cc, danilo, cc.agencia):
     danilo.conta.depositar(2500.00)
     danilo.conta.sacar(1685.69)
+else:
+    print('Falha de Autenticação!')
     
 
 
