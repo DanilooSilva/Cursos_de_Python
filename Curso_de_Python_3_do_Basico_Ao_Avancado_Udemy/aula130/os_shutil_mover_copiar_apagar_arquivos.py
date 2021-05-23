@@ -15,6 +15,6 @@ for root, dirs, files in os.walk(caminho_origem):
         new_file_path = os.path.join(caminho_destino, file)
         
         # shutil.copy(old_file_path, new_file_path)
-        # shutil.remove(new_file_path)
-        shutil.move(old_file_path, new_file_path)
-        print(f'Arquivo {file} movido com sucesso!')
+        #os.remove(new_file_path)
+        #shutil.move(old_file_path, new_file_path)
+        print(f'Arquivo removidos com sucesso!')
