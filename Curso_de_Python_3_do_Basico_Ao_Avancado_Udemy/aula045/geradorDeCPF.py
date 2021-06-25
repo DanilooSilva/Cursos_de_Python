@@ -14,6 +14,7 @@ novo_cpf += str(digito1)
 for index, numero in enumerate(range(11, 1, -1)):
     digito2 += int(novo_cpf[index]) * numero
 digito2 = 11 - (digito2 % 11)
+digito2 = digito2 if digito2 <= 9 else 0 
 
 novo_cpf += str(digito2)
 print(novo_cpf)
